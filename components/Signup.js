@@ -7,15 +7,13 @@ import auth from "../src/img/auth.jpeg";
 function Signup() {
   return (
     <>
-      <div className="formsignup">
-        <h2>Form Sign Up</h2>
-      </div>
       <div className="containers">
         <div className="img-signup">
-          {/* <Image src={auth} alt="signup" className="auth" /> */}
-          lorem compiled client and server successfully in 194 ms 210 modules
-          compiled client and server successfully in 194 ms (210 modules)
-          compiled client and server successfully in 194 ms (210 modules)
+          <h2>Form Sign Up</h2>
+          <Image src={auth} alt="signup" className="auth" />
+          <p className="message-signup">
+          Creer un compte pour avoir acces aux informations
+          </p>
         </div>
         <form className="form">
           <div className="fullname">
@@ -24,22 +22,14 @@ function Signup() {
                 {" "}
                 Firstname{" "}
               </label>
-              <input type="text" className="form-control" id="firstname" />
+              <input type="text" className="form-control form-firstname" id="firstname" />
             </div>
             <div>
               <label for="name" className="col-form-label">
                 {" "}
                 Name
               </label>
-              <input type="text" className="form-control" id="name" />
-            </div>
-          </div>
-          <div className="adress">
-            <div>
-              <label for="adress" className="col-form-label">
-                Your adress
-              </label>
-              <input type="text" className="form-control" id="adress" />
+              <input type="text" className="form-control form-name" id="name" />
             </div>
           </div>
           <div className="email">
@@ -55,7 +45,7 @@ function Signup() {
               <label for="phone" className="col-form-label">
                 Phone Number
               </label>
-              <input type="text" className="form-control" id="phone" />
+              <input type="phone" className="form-control" id="phone" />
             </div>
           </div>
           <div className="password">
@@ -75,6 +65,7 @@ function Signup() {
             </div>
           </div>
           <button type="submit" class="btn btn-primary button">Submit</button>
+          <p>Do yo have account ? <a href="#">sign in.</a></p>
         </form>
       </div>
     </>

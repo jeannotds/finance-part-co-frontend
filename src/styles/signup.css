@@ -1,7 +1,8 @@
 .containers {
-  background-color: #f2f6fc;
-  padding: 30px 70px;
+  background-color: #FFF;
+  padding: 80px 70px;
   display: flex;
+  width: 100%;
 }
 
 .formsignup {
@@ -16,34 +17,50 @@
   font-size: 27px;
 }
 
+.img-signup h2{
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
 .fullname{
     display: flex;
-    width: 70%;
+    justify-content: space-between;
     margin: auto;
+    width: 90%;
 }
+
 .adress, .email, .phone, .password{
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 
-.fullname div {
-  margin-right: 10px;
-}
-
-.img-signup {
-    width: 50%;
+.fullname div{
+  width: 49%;
 }
 
 .auth{
-    border-radius: 50%;
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 .img-signup{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.message-signup{
+  margin: auto;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.containers p{
+  margin: auto;
 }
 
 .form{
@@ -52,7 +69,94 @@
 }
 
 .button{
-    width: 70%;
+    width: 90%;
     margin: 13px auto 13px;
 
+}
+
+
+
+/* @media screen {} */
+@media screen and (max-width: 1005px) {
+  .containers {
+    /* background-color: white;
+    width: 100%;
+    padding: 80px 70px; */
+    background-color: #FFF;
+    padding: 80px 70px;
+    display: flex;
+    width: 100%;
+  }
+
+  .fullname div{
+    width: 100%;
+  }
+
+  .fullname, .email, .phone, .password{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button{
+    width: 100%;
+  }
+
+  .auth{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .img-signup{
+    padding: 0 60px;
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 812px) {
+    .img-signup h2{
+      font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 733px) {
+  .containers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .img-signup, .form{
+    width: 100%;
+  }
+
+  .auth{
+    display: none;
+  }
+
+  .img-signup{
+    width: 100%;
+    padding: 0;
+  }
+
+  .message-signup{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .img-signup p{
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 100%;
+  }
 }
