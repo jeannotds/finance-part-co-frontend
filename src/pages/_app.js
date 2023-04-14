@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "@/styles/header.css"
 import "@/styles/signup.css"
+import "@/styles/navbar.css"
 
 
 import Head from "next/head";
