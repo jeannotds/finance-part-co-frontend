@@ -160,3 +160,29 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 340px){
+  .containers{
+    padding: 0;
+  }
+
+  .form{
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  .containers{
+    padding: 0;
+  }
+
+  .form{
+    padding: 0 20px;
+  }
+
+  .img-signup p{
+    padding: 0 25px;
+    font-size: 14px;
+  }
+
+}
