@@ -42,9 +42,7 @@ header{
 
 .nav__menu-list{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 24px;
+  flex-direction: column;
 }
 
 .nav__link{
@@ -70,3 +68,20 @@ header{
 }
 
 /* @Media Query */
+@media screen and (min-width: 768px){
+  header{
+    background-color: red;
+  }
+
+  .nav__menu-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 24px;
+    text-decoration: none;
+  }
+
+  .nav__link{
+    text-decoration: none;
+  }
+}
