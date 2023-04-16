@@ -1,8 +1,7 @@
 .containers {
-  background-color: #FFF;
   padding: 80px 70px;
   display: flex;
-  width: 100%;
+  width: 90%;
 }
 
 .formsignup {
@@ -178,6 +177,11 @@
 
   .form{
     padding: 0 20px;
+  }
+
+  .img-signup h2{
+    font-size: 23px;
+    margin-top: 26px;
   }
 
   .img-signup p{
