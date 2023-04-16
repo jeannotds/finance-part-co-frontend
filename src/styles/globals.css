@@ -38,16 +38,44 @@ header{
   padding: 16px;
   justify-content: space-between;
   align-items: center;
+  background-color: #F1F1F1;
+}
+
+.nav__menu-bar{
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.nav__menu-bar div{
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 2px;
 }
 
 .nav__menu-list{
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 60px;
+  width: 288px;
+  row-gap: 24px;
+  padding: 24px 16px;
+  right: 0;
+  background-color: #F1F1F1;
+  min-height: calc(100vh - 60px);
 }
 
 .nav__link{
   font-size: 18px;
   position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav__link:hover{
+  font-weight: bold;
 }
 
 .nav__link::before{
@@ -71,6 +99,7 @@ header{
 @media screen and (min-width: 768px){
   header{
     background-color: red;
+    height: 100px;
   }
 
   .nav__menu-list{
@@ -83,5 +112,22 @@ header{
 
   .nav__link{
     text-decoration: none;
+  }
+
+  .nav__link::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: -16px;
+    left: 0;
+    height: 6px;
+    transition: all 0.2s;
+    background-color: black;
+  }
+  
+  .nav__link:hover::before{
+    font-size: 18px;
+    /* position: relative; */
+    /* width: 100%; */
   }
 }
