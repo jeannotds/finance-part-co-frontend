@@ -65,7 +65,7 @@ function Signup() {
             </div>
           </div>
           <button type="submit" class="btn btn-primary button">Submit</button>
-          <p>Do yo have account ? <a href="#">sign in.</a></p>
+          <p>Do yo have account ? <a href="signin">sign in.</a></p>
         </form>
       </div>
     </>

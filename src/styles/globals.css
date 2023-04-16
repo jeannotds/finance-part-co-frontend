@@ -45,6 +45,7 @@ header{
   display: flex;
   flex-direction: column;
   row-gap: 6px;
+  cursor: pointer;
 }
 
 .nav__menu-bar div{
@@ -62,9 +63,14 @@ header{
   width: 288px;
   row-gap: 24px;
   padding: 24px 16px;
-  right: 0;
+  right: -288px;
   background-color: #F1F1F1;
   min-height: calc(100vh - 60px);
+  transition: all 0.2s;
+}
+
+.nav__menu-list{
+  right: 0;
 }
 
 .nav__link{
