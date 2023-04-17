@@ -74,14 +74,8 @@
 
 }
 
-
-
-/* @media screen {} */
 @media screen and (max-width: 1005px) {
   .containers {
-    /* background-color: white;
-    width: 100%;
-    padding: 80px 70px; */
     background-color: #FFF;
     padding: 80px 70px;
     display: flex;
