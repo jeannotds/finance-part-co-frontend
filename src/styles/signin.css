@@ -1,0 +1,151 @@
+.sigin__container {
+    padding: 80px 70px;
+    display: flex;
+    width: 90%;
+    height: 80vh;
+  }
+
+  .auth__signin{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.form__email{
+    margin-top: 50px;
+}
+
+.message-signin{
+    text-align: center;
+}
+
+.form__password{
+    width: 100%;
+
+}
+
+.form__form{
+    width: 50%;
+    margin: 20px 0;
+}
+
+.form__button{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.msg__account{
+   display: flex;
+   justify-content: flex-end;
+   padding-top: 6px;
+}
+
+.from__google{
+    margin: 14px 0;
+}
+
+.google{
+    background-color: #c94439;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.google:hover{
+    background-color: rgba(201, 68, 57, 0.85);
+
+}
+
+.icon__google{
+    margin: 0 20px;
+}
+
+
+/* Media query */
+@media screen and (max-width: 1005px){
+    .sigin__container{
+        width: 100%;
+    }
+    .form__email{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 875px){
+    .img-signup h2{
+        text-align: center;
+        font-size: 24px;
+    }
+    .form__email{
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 735px){
+    .sigin__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .form__email{
+        margin-top: 0;
+    }
+    .auth__signin{
+        display: none;
+    }
+    .form__form{
+        width: 100%;
+    }
+    .img-signup h2{
+        padding: 0;
+    }
+    .message-signin{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .sigin__container{
+        padding: 0;
+    }
+      .form__form{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .form__email{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .sigin__container{
+        padding: 0;
+    }
+    .form__form{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .form__email div{
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .img-signup h2{
+        font-size: 23px;
+        margin-top: 26px;
+      }
+      .img-signup p{
+        padding: 0 25px;
+        font-size: 14px;
+      }
+}

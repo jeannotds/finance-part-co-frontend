@@ -30,15 +30,13 @@ function Nav() {
           <h1 className="logo">Fin.P</h1>
         </Link>
 
-        <div onClick={() => setNavActive(!navActive)} className="nav__menu-bar">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div>
+        
         </div>
-        <div className={`${navActive ? "active" : "nav__menu-list"}`}>
+        <div className="">
           {NAV_LIST.map((menu, idx) => {
             return (
-              <div key={menu.idx} onClick={() => {SetActiveIdx(idx); setNavActive(false)}}>
+              <div key={menu.idx} >
                 <NavItem active={activeIdx === idx} {...menu} />
               </div>
             );
