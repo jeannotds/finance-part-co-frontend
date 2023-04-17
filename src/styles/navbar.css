@@ -1,130 +1,122 @@
-
-.header{
-    background-color: #F2F6FC;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
-    padding: 0 70px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    align-content: center;
+.header {
+  background-color: #f2f6fc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  padding: 0 70px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  align-content: center;
 }
 
-.logo{
-    color: #0D99FF;
-    font-weight: bolder;
+.logo {
+  color: #0d99ff;
+  font-weight: bolder;
 }
 
-.icons{
-    display: none;
+.icons {
+  display: none;
 }
 
- .menu__link{
-    padding: 0 25px;
-    text-decoration: none;
-    color: FFF;
-    font-size: 17px;
-    color: rgba(0, 0, 0, 0.78);
-    font-weight: 500;
-    position: relative;
+.menu__link {
+  padding: 0 25px;
+  text-decoration: none;
+  color: FFF;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 500;
+  position: relative;
 }
 
-.menu__link::before{
-    content: "";
-    width: 0;
-    height: 4px;
-    background-color: #0D99FF;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 30px;
-    transition: .4s ease;
+.menu__link::before {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #0d99ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 30px;
+  transition: 0.4s ease;
 }
 
-
-
-.menu__link:hover::before{
-    width: 100%;
-    transition: .4s ease;
-    
+.menu__link:hover::before {
+  width: 100%;
+  transition: 0.4s ease;
 }
 
-.menu__link:hover{
-    color: rgba(0, 0, 0, 0.6);
+.menu__link:hover {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.active{
-    background-color: #0D99FF;
-    padding: 10px 17px;
-    border-radius: 8px;
-    color: white;
-    transition: all 0.5s ease-in-out;
-    text-decoration: none;
-    font-weight: bold;
+.active {
+  background-color: #0d99ff;
+  padding: 10px 17px;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
 }
 
- .active:hover{
-    background: rgba(13, 153, 255, 0.68);
+.active:hover {
+  background: rgba(13, 153, 255, 0.68);
 }
 
 /* Media Query */
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 6;
+  }
 
-    .header{
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: 6;
-    }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    bottom: -95px;
+    background-color: #f2f6fc;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+  }
 
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        row-gap: 6px;
-        position: absolute;
-        left: 0;
-        right: 0px;
-        bottom: -95px;
-        background-color: #F2F6FC;
-        z-index: 10;
-        transition: all 0.2s ease-in-out;
-    } 
+  .actived {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    bottom: -8px;
+    background-color: #f2f6fc;
+    z-index: 10;
+    opacity: 0;
+  }
 
-    .actived{
-        display: flex;
-        flex-direction: column;
-        row-gap: 6px;
-        position: absolute;
-        left: 0;
-        right: 0px;
-        bottom: -8px;
-        background-color: #F2F6FC;
-        z-index: 10;
-        opacity: 0;
-        /* transition: all 0.1s ease-in-out; */
-    }
-    
+  .menu__link:hover::before {
+    display: none;
+  }
 
-    .menu__link:hover::before{
-        display: none;
-    }
-    
-    .logo{
-        position: relative;
-        z-index: 11;
-    }
+  .logo {
+    position: relative;
+    z-index: 11;
+  }
 
-    .icons{
-        position: relative;
-        display: block;
-        z-index: 13;
-        transition: all 0.3s ease-in-out;
-        margin-bottom: 8px;
-    }
-
+  .icons {
+    position: relative;
+    display: block;
+    z-index: 13;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 8px;
+  }
 }
