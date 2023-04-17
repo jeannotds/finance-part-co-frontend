@@ -17,137 +17,169 @@
   font-size: 27px;
 }
 
-.img-signup h2{
+.img-signup h2 {
   font-size: 35px;
   margin-bottom: 30px;
 }
 
-.fullname{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    width: 90%;
+.fullname {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
 }
 
-.adress, .email, .phone, .password{
-    width: 90%;
-    margin: auto;
+.adress,
+.email,
+.phone,
+.password {
+  width: 90%;
+  margin: auto;
 }
 
-.fullname div{
+.fullname div {
   width: 49%;
 }
 
-.auth{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
+.msg__account {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  margin: auto;
 }
 
-.img-signup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.auth {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
-.message-signup{
+.img-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.message-signup {
   margin: auto;
   padding: 0 100px;
   text-align: center;
 }
 
-.containers p{
+.containers p {
   margin: auto;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.button{
-    width: 90%;
-    margin: 13px auto 13px;
-
+.button {
+  width: 90%;
+  margin: 13px auto 13px;
 }
 
 @media screen and (max-width: 1005px) {
   .containers {
-    background-color: #FFF;
+    background-color: #fff;
     padding: 80px 70px;
     display: flex;
     width: 100%;
   }
 
-  .fullname div{
+  .fullname div {
     width: 100%;
   }
 
-  .fullname, .email, .phone, .password{
+  .msg__account {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+  }
+
+  .fullname,
+  .email,
+  .phone,
+  .password {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .button{
+  .button {
     width: 100%;
   }
 
-  .auth{
+  .auth {
     width: 250px;
     height: 250px;
     object-fit: cover;
   }
 
-  .form{
+  .form {
     display: flex;
     flex-direction: column;
     width: 50%;
   }
 
-  .img-signup{
+  .img-signup {
     padding: 0 60px;
     width: 50%;
   }
-
 }
 
 @media screen and (max-width: 812px) {
-    .img-signup h2{
-      font-size: 28px;
-    }
+  .img-signup h2 {
+    font-size: 28px;
+  }
+  .msg__account {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 733px) {
-  .containers{
+  .containers {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+  .msg__account {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+  }
 
-  .img-signup, .form{
+  .img-signup,
+  .form {
     width: 100%;
   }
 
-  .auth{
+  .auth {
     display: none;
   }
 
-  .img-signup{
+  .img-signup {
     width: 100%;
     padding: 0;
   }
 
-  .message-signup{
+  .message-signup {
     width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  .img-signup p{
+  .img-signup p {
     text-align: center;
     margin: 0 0 20px 0;
     padding: 0;
@@ -155,33 +187,44 @@
   }
 }
 
-@media screen and (max-width: 340px){
-  .containers{
+@media screen and (max-width: 340px) {
+  .containers {
     padding: 0;
   }
 
-  .form{
+  .form {
     padding: 0 20px;
+  }
+  .msg__account{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
   }
 }
 
-@media screen and (max-width: 280px){
-  .containers{
+@media screen and (max-width: 280px) {
+  .containers {
     padding: 0;
   }
 
-  .form{
+  .form {
     padding: 0 20px;
   }
 
-  .img-signup h2{
+  .img-signup h2 {
     font-size: 23px;
     margin-top: 26px;
   }
 
-  .img-signup p{
+  .img-signup p {
     padding: 0 25px;
     font-size: 14px;
   }
-
+  .msg__account{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+  }
 }
