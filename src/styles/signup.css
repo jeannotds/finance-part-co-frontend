@@ -2,7 +2,9 @@
   padding: 80px 70px;
   display: flex;
   width: 90%;
-  height: 80vh;
+  height: 100vh;
+  /* background-color: rebeccapurple; */
+  margin-top: 40px;
 }
 
 .formsignup {
