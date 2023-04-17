@@ -89,7 +89,7 @@
         position: absolute;
         left: 0;
         right: 0px;
-        bottom: -85px;
+        bottom: -95px;
         background-color: #F2F6FC;
         z-index: 10;
         transition: all 0.2s ease-in-out;
@@ -124,6 +124,7 @@
         display: block;
         z-index: 13;
         transition: all 0.3s ease-in-out;
+        margin-bottom: 8px;
     }
 
 }
