@@ -144,3 +144,11 @@ header{
     /* width: 100%; */
   }
 }
+
+
+/* Good code */
+
+.homepage{
+  display: flex;
+  flex-direction: column;
+}

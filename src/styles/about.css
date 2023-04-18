@@ -1,0 +1,86 @@
+body {
+  font-size: 18px;
+}
+
+.about__container {
+  padding: 60px 70px 60px;
+}
+
+.blog__conatainer {
+  background-color: rgba(226, 231, 238, 0.3);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.about__container h2,
+.about__platform {
+  text-align: center;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.about__container h2 {
+  padding: 0 0 40px 0;
+  position: relative;
+  font-weight: bold;
+}
+
+.about__platform {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.about__container h2::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background-color: rgba(31, 18, 18, 0.53);
+  position: absolute;
+  bottom: 27px;
+}
+
+.about__platform-info {
+  display: flex;
+  margin: 0px 0 0;
+}
+
+.about__platform-info p,
+.about__platform-info div {
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+.image__about {
+  width: 20%;
+  margin: auto;
+}
+
+.about__platform-paltform,
+.about__platform-finance {
+  padding: 0 30px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .about__platform-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__platform-paltform,
+  .about__platform-finance {
+    padding: 15px 0;
+  }
+
+  .about__platform-finance div,
+  .about__platform-paltform div {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 280px) {
+    .about__container{
+        padding: 20px 20px 20px;
+    }
+}

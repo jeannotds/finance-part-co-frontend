@@ -5,6 +5,7 @@ import "@/styles/signin.css";
 import "@/styles/navbar.css";
 import "@/styles/mainpage.css";
 import "@/styles/projectcard.css";
+import "@/styles/about.css";
 
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
