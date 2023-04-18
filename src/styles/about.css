@@ -6,6 +6,20 @@ body {
   padding: 60px 70px 60px;
 }
 
+.aboutpage{
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.background__image{
+    background-image: url('../img/people.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
 .blog__conatainer {
   background-color: rgba(226, 231, 238, 0.3);
   position: absolute;
