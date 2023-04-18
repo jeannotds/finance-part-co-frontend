@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import auth from "../src/img/auth.jpeg";
 import { useRouter } from 'next/router'
-// import { FaGofore } from "react-icons/tb";
 import { FaGofore } from "react-icons/fa";
 
 function Signin() {

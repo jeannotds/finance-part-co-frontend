@@ -2,7 +2,6 @@ import React from 'react'
 import Image from "next/image";
 import Project from "../src/img/project.png"
 import imgProject from "../src/img/people.png"
-import About from "./About";
 
 function ProjectItem() {
   return (

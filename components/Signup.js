@@ -35,22 +35,6 @@ function Signup() {
                 />
               </div>
             </div>
-            {/* <div className="form__email">
-              <div>
-                <label for="form__email" className="col-form-label">
-                  Email
-                </label>
-                <input type="text" className="form-control" id="form__email" />
-              </div>
-            </div> */}
-            {/* <div className="form__phone">
-              <div>
-                <label for="form__phone" className="col-form-label">
-                  Phone Number
-                </label>
-                <input type="phone" className="form-control" id="form__phone" />
-              </div>
-            </div> */}
             <div className="form__password">
               <div>
                 <label for="form__password" className="col-form-label">

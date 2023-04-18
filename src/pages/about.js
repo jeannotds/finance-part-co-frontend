@@ -4,7 +4,6 @@ import About from "../../components/About";
 function about() {
   return (
     <div className="main">
-      {/* <main className="main"> */}
         <div className="blog__main" data-aos="fade-right">
           <h2>Service financement participatif.</h2>
           <div>
@@ -17,7 +16,6 @@ function about() {
             Sign Up
           </a>
         </div>
-      {/* </main> */}
       <About />
     </div>
   );

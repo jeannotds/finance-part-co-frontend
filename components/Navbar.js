@@ -25,8 +25,6 @@ function Navbar() {
 
 
   const [navActive, setNavActive] = useState(false)
-  // const [activeMenu, setActiveMenu] = useState(false)
-
 
   return (
     <header className="header">

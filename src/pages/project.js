@@ -1,6 +1,4 @@
 import React from 'react'
-import ProjectCard from '../../components/ProjectCard'
-import MainPage from '../../components/MainPage'
 import ProjectItem from '../../components/ProjectItem'
 
 function project() {
