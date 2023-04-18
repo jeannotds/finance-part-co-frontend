@@ -6,7 +6,6 @@ import "@/styles/navbar.css"
 
 
 import Head from "next/head";
-import Nav from "../../components/Nav";
 import Navbar from "../../components/Navbar";
 
 export default function App({ Component, pageProps }) {
