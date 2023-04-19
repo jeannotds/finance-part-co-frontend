@@ -33,8 +33,8 @@ function Footer() {
           </ul>
           <div className="icons__data">
             <div className="site__link">
-              <a href="#"><IoLogoFacebook className="icons__footer"/></a>
-              <a href="#"><IoLogoLinkedin className="icons__footer"/></a>
+              <a href="#" className="link__icons"><IoLogoFacebook className="icons__footer"/></a>
+              <a href="#" className="link__icons"><IoLogoLinkedin className="icons__footer"/></a>
             </div>
           </div>
         </div>
