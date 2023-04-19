@@ -47,4 +47,4 @@ export default Navbar;
                   <a className="menu__link" key={index} href={nav.href}>{nav.text}</a>
             )
           })
-        } */}
+  } */}

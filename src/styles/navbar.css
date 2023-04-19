@@ -68,17 +68,14 @@
   background: rgba(13, 153, 255, 0.68);
 }
 
-/* Media Query */
-
 @media screen and (max-width: 768px) {
   .header {
     position: fixed;
     left: 0;
     right: 0;
     z-index: 6;
-    
-      padding: 0 20px;
-    
+
+    padding: 0 20px;
   }
 
   .navbar {
@@ -123,8 +120,4 @@
     transition: all 0.3s ease-in-out;
     margin-bottom: 8px;
   }
-}
-
-@media screen and (max-width: 768px) {
-
 }

@@ -29,27 +29,27 @@
   text-align: center;
 }
 
-
 @media screen and (max-width: 1024px) {
-  .blog__signup-container{
-      margin: 0;
-      padding: 0;
-      top: 120px;
+  .blog__signup-container {
+    margin: 0;
+    padding: 0;
+    top: 120px;
   }
 }
 
 @media screen and (max-width: 820px) {
-    .blog__signup-container{
-        margin: 0;
-        padding: 0;
-        top: 200px;
-    }
+  .blog__signup-container {
+    margin: 0;
+    padding: 0;
+    top: 200px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .signup__container {
     width: 100%;
   }
+
   .blog__signup-container {
     display: flex;
     flex-direction: column;
@@ -72,24 +72,28 @@
   }
 }
 
-@media screen and (max-width: 280px){
-  .signup__container{
-      width: 100%;
-      padding: 0;
+@media screen and (max-width: 280px) {
+  .signup__container {
+    width: 100%;
+    padding: 0;
   }
-  .blog__signup-container{
-      width: 100%;
-      padding: 0;
-      top: 10px;
+
+  .blog__signup-container {
+    width: 100%;
+    padding: 0;
+    top: 10px;
   }
-  .blog__signup-container h2{
+
+  .blog__signup-container h2 {
     padding: 100px 0 0 0;
   }
-  .message__signin{
+
+  .message__signin {
     display: none;
   }
-  .form__form-signup{
-      width: 100%;
-      padding: 20px;
+
+  .form__form-signup {
+    width: 100%;
+    padding: 20px;
   }
 }

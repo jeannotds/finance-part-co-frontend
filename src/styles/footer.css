@@ -7,11 +7,6 @@
   flex-direction: column;
 }
 
-/* .platform__info-footer ul li{
-    display: flex;
-    align-items: center;
-} */
-
 .footer li {
   font-size: 16px;
   line-height: 1.8;
@@ -129,8 +124,6 @@
   background-color: rgba(13, 153, 255, 0.64);
   color: rgba(255, 255, 255, 0.67);
 }
-
-/* Media Query */
 
 @media screen and (max-width: 768px) {
   .infos__footer {

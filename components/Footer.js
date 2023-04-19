@@ -43,16 +43,6 @@ function Footer() {
           <a className="signup__footer" href="#">Sign Up</a>
         </div>
       </div>
-      {/* <div className="nav__footer">
-        <div>Copyright by jeannot L ds 2023</div>
-        <div className="down__nav">
-          <a className="link__nav" href="home">Home</a>
-          <a className="link__nav" href="about">About</a>
-          <a className="link__nav" href="project">Project</a>
-          <a className="link__nav" href="contactus">Contact us</a>
-          <a className="link__nav" href="signup">sign up</a>
-        </div>
-      </div> */}
     </div>
   );
 }

@@ -197,7 +197,7 @@ function ProjectCard() {
         </div>
       </div>
     </div>
-          <About />
+    <About />
     </>
   );
 }
