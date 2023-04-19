@@ -6,9 +6,11 @@ import "@/styles/navbar.css";
 import "@/styles/mainpage.css";
 import "@/styles/projectcard.css";
 import "@/styles/about.css";
+import "@/styles/footer.css";
 
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -18,6 +20,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

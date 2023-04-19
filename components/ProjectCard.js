@@ -6,7 +6,8 @@ import About from "./About";
 
 function ProjectCard() {
   return (
-    <div className="project__conatiner">
+    <>
+      <div className="project__conatiner">
       <div className="top_img_title">
         <Image src={Project} className="present__project" alt="Project" />
         <h2>funded projects</h2>
@@ -195,8 +196,9 @@ function ProjectCard() {
           </div>
         </div>
       </div>
-      <About />
     </div>
+          <About />
+    </>
   );
 }
 

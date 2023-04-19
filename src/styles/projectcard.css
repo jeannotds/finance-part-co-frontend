@@ -3,9 +3,10 @@ body{
 }
 
 .project__conatiner{
-    padding: 0 70px;
-    height: 100vh;
+    padding: 0 70px 50px;
+    height: auto;
     position: relative;
+    
 }
 
 .present__project{
