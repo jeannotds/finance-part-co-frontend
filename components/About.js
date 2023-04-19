@@ -13,7 +13,7 @@ function About() {
           Dignissimos sed impedit ducimus nobis architecto a.
         </p>
         <div className="about__platform-info">
-          <div className="about__platform-paltform">
+          <div className="about__platform-paltform" data-aos="zoom-in" data-aos-duration="800">
             <Image src={Platform} alt="Image Platform" className="image__about" />
             <div>Platform</div>
             <p>
@@ -22,7 +22,7 @@ function About() {
               Dignissimos sed impedit ducimus nobis architecto a.
             </p>
           </div>
-          <div className="about__platform-finance">
+          <div className="about__platform-finance" data-aos="zoom-in" data-aos-duration="1500">
             <Image src={Finance} alt="Image Platform" className="image__about" />
             <div>Platform</div>
             <p>

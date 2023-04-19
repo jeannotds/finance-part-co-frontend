@@ -13,7 +13,7 @@ function ProjectItem() {
           <h2>funded projects</h2>
         </div>
         <div className="container__card-project">
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -21,7 +21,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -35,7 +35,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -43,7 +43,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -57,7 +57,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -65,7 +65,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -79,7 +79,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -87,7 +87,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -101,7 +101,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -109,7 +109,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -123,7 +123,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -131,7 +131,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -145,7 +145,7 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -153,7 +153,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
@@ -167,7 +167,8 @@ function ProjectItem() {
               </p>
             </div>
           </div>
-          <div className="card__project">
+
+          <div className="card__project" data-aos="zoom-in-right" data-aos-duration="2000">
             <div className="img__card">
               <Image
                 src={imgProject}
@@ -175,117 +176,7 @@ function ProjectItem() {
                 className="image__project"
               />
             </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
-              </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="card__project">
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
-              </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="card__project">
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
-              </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="card__project">
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
-              </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="card__project">
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
-              </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="card__project">
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
+            <div className="contains__card" >
               <div className="user__info">
                 <Image
                   src={imgProject}
