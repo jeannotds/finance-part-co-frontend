@@ -1,23 +1,15 @@
 import React from "react";
 import About from "../../components/About";
+import Footer from "../../components/Footer";
+import MainPage from "../../components/MainPage";
 
 function about() {
   return (
-    <div className="main">
-        <div className="blog__main" data-aos="fade-right">
-          <h2>Service financement participatif.</h2>
-          <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            iste quisquam cum voluptates temporibus adipisci nisi asperiores
-            nostrum quibusdam, maiores facere optio ea! Dignissimos sed impedit
-            ducimus nobis architecto a.
-          </div>
-          <a className="signup__main" href="#">
-            Sign Up
-          </a>
-        </div>
+    <>
+      <MainPage />
       <About />
-    </div>
+      <Footer />
+    </>
   );
 }
 
