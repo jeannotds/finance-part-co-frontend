@@ -47,8 +47,21 @@
 }
 
 .platform__info-footer span {
+  text-decoration: none;
   padding-left: 10px;
   transition: all 0.3s ease-in-out;
+}
+
+.platform__info-footer span .link__href{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  transition: all 0.3s ease-in-out;
+}
+
+.platform__info-footer span .link__href:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  color: #0d99ff;
 }
 
 .platform__info-footer span:hover {
@@ -72,6 +85,18 @@
 .contactus__info-footer span {
   padding-left: 10px;
   transition: all 0.3s ease-in-out;
+}
+
+.contactus__info-footer .link__href{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  transition: all 0.3s ease-in-out;
+}
+
+.contactus__info-footer .link__href:hover{
+  text-decoration: none;
+  color: rgba(13, 153, 255, 0.5);
+  cursor: pointer;
 }
 
 .contactus__info-footer span:hover {

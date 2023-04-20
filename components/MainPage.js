@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function MainPage() {
@@ -11,7 +12,7 @@ function MainPage() {
           quibusdam, maiores facere optio ea! Dignissimos sed impedit ducimus
           nobis architecto a.
         </div>
-        <a className="signup__main" href="#">Sign Up</a>
+        <Link className="signup__main" href="/signup">Sign Up</Link>
       </div>
     </main>
   );
