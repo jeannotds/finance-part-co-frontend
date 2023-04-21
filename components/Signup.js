@@ -8,6 +8,7 @@ function Signup() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [alert, setAlert] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,7 +23,13 @@ function Signup() {
         password,
       },
     });
-    console.log("user : ", user);
+    try {
+      if (user) {
+        return true;
+      }
+    } catch (err) {
+      throw err;
+    }
   }
 
   return (
@@ -30,10 +37,10 @@ function Signup() {
       <div className="signup__container">
         <div className="blog__signup-container">
           <div className="img__signup">
-            <h2>Form Sign In</h2>
+            <h2>Form Sign Up</h2>
             <Image src={auth} alt="signup" className="auth__signup" />
             <p className="message__signin">
-              Connectes-toi pour avoir acces aux données.
+              Connectez-vous pour avoir acces aux données.
             </p>
           </div>
           <form className="form__form-signup">
@@ -101,6 +108,7 @@ function Signup() {
             </div>
           </form>
         </div>
+        {/* {alert && <div className="alert">AMEKEKEJEHEHEHE</div>} */}
       </div>
     </>
   );

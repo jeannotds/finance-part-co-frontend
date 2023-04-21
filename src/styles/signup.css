@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.alert{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
 .blog__signup-container {
   width: 68%;
   display: flex;
