@@ -8,7 +8,9 @@ import "@/styles/mainpage.css";
 import "@/styles/projectcard.css";
 import "@/styles/about.css";
 import "@/styles/footer.css";
-import AOS from 'aos'
+import AOS from "aos";
+import { store } from "../redux/store";
+import { Provider } from "react-redux";
 
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
@@ -16,7 +18,7 @@ import Head from "next/head";
 export default function App({ Component, pageProps }) {
   return (
     <>
-       <Head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -25,8 +27,10 @@ export default function App({ Component, pageProps }) {
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>AOS.init();</script>
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Navbar />
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }

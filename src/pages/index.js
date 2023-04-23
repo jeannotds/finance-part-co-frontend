@@ -4,23 +4,27 @@ import MainPage, { Main } from "../../components/MainPage";
 import ProjectCard from "../../components/ProjectCard";
 import Footer from "../../components/Footer";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_USER } from "@/redux/user";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [user, setUser] = useState();
   const [token, setToken] = useState();
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const userData = window.localStorage.getItem("data");
-      const data = JSON.parse(userData);
-      setUser(data.user);
-      setToken(data.access_token);
+      const userData = JSON.parse(window.localStorage.getItem("data"));
+      setUser(userData);
     }
   }, []);
 
-  console.log("user : ",user);
-  console.log("token : ", token);
+  dispatch(SET_USER(user));
+
+  const myuser = useSelector((state) => state.user);
+  console.log("myuser myuser : ", myuser);
 
   return (
     <>

@@ -23,11 +23,12 @@ function Signin() {
         password,
       },
     });
-  
+
+    // console.log("dddddddddddd : ", user);
+
     try {
       if (user) {
         window.localStorage.setItem("data", JSON.stringify(user.data));
-        // window.localStorage.setItem("token", JSON.stringify(user.data.access_token));
         router.push("/");
       }
     } catch (err) {
