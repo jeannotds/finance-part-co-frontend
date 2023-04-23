@@ -1,7 +1,6 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import NavbarItem from "./NavbarItem";
-import { useSelector } from "react-redux";
 
 const NAV_LIST = [
   {
@@ -23,8 +22,6 @@ const NAV_LIST = [
 ];
 
 function Navbar() {
-  const user = useSelector((state) => state.user);
-  console.log(user);
 
   const [navActive, setNavActive] = useState(false);
 

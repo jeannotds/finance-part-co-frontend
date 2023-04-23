@@ -8,7 +8,6 @@ import axios from "axios";
 function Signin() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [user, setUser] = React.useState({});
 
   const router = useRouter();
 
@@ -23,8 +22,6 @@ function Signin() {
         password,
       },
     });
-
-    // console.log("dddddddddddd : ", user);
 
     try {
       if (user) {
@@ -90,7 +87,7 @@ function Signin() {
             </div>
             <div className="link__signin">
               <p className="msg__account">
-                Do yo have account ? <a href="signup">sign in.</a>
+                Do yo have account ? <a href="signup">sign Up.</a>
               </p>
             </div>
           </form>

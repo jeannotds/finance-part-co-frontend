@@ -6,25 +6,23 @@ import Footer from "../../components/Footer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SET_USER } from "@/redux/user";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [user, setUser] = useState();
-  const [token, setToken] = useState();
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const userData = JSON.parse(window.localStorage.getItem("data"));
-      setUser(userData);
+      setUser(userData?.user);
     }
   }, []);
 
   dispatch(SET_USER(user));
-
-  const myuser = useSelector((state) => state.user);
-  console.log("myuser myuser : ", myuser);
 
   return (
     <>
