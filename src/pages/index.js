@@ -7,13 +7,18 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SET_USER } from "@/redux/user";
 import { useRouter } from "next/router";
+import { SET_PROJECT } from "@/redux/project";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ dataproject }) {
   const [user, setUser] = useState();
   const dispatch = useDispatch();
   const router = useRouter();
+
+  dispatch(SET_PROJECT(dataproject));
+
+  console.log("dataproject : ", dataproject);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -36,16 +41,16 @@ export default function Home() {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3001/user");
-  const data = await res.json();
+  const res = await fetch("http://localhost:3001/project");
+  const dataproject = await res.json();
 
-  if (!data) {
+  if (!dataproject) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { data },
+    props: { dataproject },
   };
 }

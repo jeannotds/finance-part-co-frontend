@@ -49,7 +49,7 @@ function NavbarItem() {
             {userData.firstname} {userData.name}
             <FaAngleRight className="signup__icon" onClick={(e) => setSignup(signup)} />
             {
-              !signup ? <div className="blog__signup" onClick={HandleSignup}>Sign up</div> : ""
+              !signup ? <div className="blog__signup" onClick={HandleSignup}>Sign out</div> : ""
             }
           </Link>
         ) : (
