@@ -4,9 +4,11 @@ import React, { useEffect } from "react";
 import Profile from "../src/img/profile.png";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import { FaAngleRight } from "react-icons/fa";
 
 function NavbarItem() {
   const [userData, setUserData] = React.useState();
+  const [signup, setSignup] = React.useState(false);
   const router = useRouter();
 
   const datauser = useSelector((state) => state.user);
@@ -29,7 +31,7 @@ function NavbarItem() {
   };
 
   return (
-    <div className="container__menu">
+    <div className="container__menu" onClick={(e) => setSignup(!signup)}>
       <Link href="/" className="menu__link">
         Home
       </Link>
@@ -40,11 +42,15 @@ function NavbarItem() {
         Project
       </Link>
 
-      <div>
+      <div className="action__signup" >
         {userData ? (
-          <Link href="/" className="connection" onClick={HandleSignup}>
+          <Link href="/" className="connection">
             <Image src={Profile} className="user__profile" alt="user urofile" />
             {userData.firstname} {userData.name}
+            <FaAngleRight className="signup__icon" onClick={(e) => setSignup(signup)} />
+            {
+              !signup ? <div className="blog__signup" onClick={HandleSignup}>Sign up</div> : ""
+            }
           </Link>
         ) : (
           <Link href="signin" className="active">
