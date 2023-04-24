@@ -1,31 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { FaUserAlt } from "react-icons/fa";
-import { FaUserFriends } from "react-icons/fa";
-import { IconName } from "react-icons/fa";
-import { FaUserEdit } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FaUserTie } from "react-icons/fa";
 import Profile from "../src/img/profile.png";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 function NavbarItem() {
   const [userData, setUserData] = React.useState();
   const router = useRouter();
 
+  const datauser = useSelector((state) => state.user);
+
+  console.log("users : ", users);
+
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const user = JSON.parse(window.localStorage.getItem("data"));
+    if (typeof localStorage !== "undefined") {
+      const user = JSON.parse(localStorage.getItem("data"));
       setUserData(user?.user);
     }
-  }, []);
+  }, [datauser]);
 
   console.log("userData : ", userData);
 
   const HandleSignup = () => {
     window.localStorage.removeItem("data");
     router.push("/");
+    // router.reload();
+    router.reload(window.location.pathname);
   };
 
   return (

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import NavbarItem from "./NavbarItem";
+import { useRouter } from "next/router";
 
 const NAV_LIST = [
   {
@@ -22,8 +23,9 @@ const NAV_LIST = [
 ];
 
 function Navbar() {
-
   const [navActive, setNavActive] = useState(false);
+
+  
 
   return (
     <header className="header">
