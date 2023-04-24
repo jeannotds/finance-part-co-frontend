@@ -11,7 +11,7 @@ function NavbarItem() {
 
   const datauser = useSelector((state) => state.user);
 
-  console.log("users : ", users);
+  console.log("users : ", datauser);
 
   useEffect(() => {
     if (typeof localStorage !== "undefined") {
@@ -25,7 +25,6 @@ function NavbarItem() {
   const HandleSignup = () => {
     window.localStorage.removeItem("data");
     router.push("/");
-    // router.reload();
     router.reload(window.location.pathname);
   };
 
