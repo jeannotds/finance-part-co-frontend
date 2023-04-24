@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 function ProjectCard() {
   const project = useSelector((state) => state.project);
-  console.log("project : ", project);
+  console.log("projects : ", project);
 
   return (
     <>
@@ -17,32 +17,37 @@ function ProjectCard() {
           <h2>funded projects</h2>
         </div>
         <div className="container__card-project">
-          <div
-            className="card__project"
-            data-aos="zoom-in"
-            data-aos-duration="800"
-          >
-            <div className="img__card">
-              <Image
-                src={imgProject}
-                alt="Image Project"
-                className="image__project"
-              />
-            </div>
-            <div className="contains__card">
-              <div className="user__info">
-                <Image
-                  src={imgProject}
-                  className="image__user"
-                  alt="Image Project"
-                />
-                <div>Jeannot Lds</div>
+          {project?.project?.map((proj) => {
+            return (
+              <div
+                className="card__project"
+                data-aos="zoom-in"
+                data-aos-duration="800"
+                key={proj.id}
+              >
+                <div className="img__card">
+                  <Image
+                    src={imgProject}
+                    alt="Image Project"
+                    className="image__project"
+                  />
+                </div>
+                <div className="contains__card">
+                  <div className="user__info">
+                    <Image
+                      src={imgProject}
+                      className="image__user"
+                      alt="Image Project"
+                    />
+                    <div>Jeannot Lds</div>
+                  </div>
+                  <p>
+                    {proj.description}
+                  </p>
+                </div>
               </div>
-              <p>
-                Lorem, ipsum dolor sit amet redam consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <About />
