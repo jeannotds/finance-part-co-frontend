@@ -17,6 +17,7 @@ function Signup() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    // e.stopPropagation();
 
     if (!firstname) {
       setEmpty("Veuillez renseigner votre prénom");
@@ -41,9 +42,8 @@ function Signup() {
 
       try {
         if (user) {
-          console.log("user : ", user);
+          e.preventDefault();
           router.push("/signin");
-          console.log("users : ", user);
         } else {
           console.log("User not found");
         }

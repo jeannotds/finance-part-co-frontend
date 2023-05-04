@@ -29,11 +29,13 @@ function Signin() {
           password,
         },
       }).then((user) =>{
+          e.preventDefault();
           window.localStorage.setItem("data", JSON.stringify(user.data));
-          router.push("./");
+          router.push("/");
         }
        ).catch ((err) =>{
           if(err.response){
+            e.preventDefault();
             setEmpty("Email ou mot de passe incorrect");
           }        
       })

@@ -24,7 +24,8 @@ function NavbarItem() {
 
   console.log("userData : ", userData);
 
-  const HandleSignup = () => {
+  const HandleSignup = (e) => {
+    e.preventDefault();
     window.localStorage.removeItem("data");
     router.push("/");
     router.reload(window.location.pathname);
