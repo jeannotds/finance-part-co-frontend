@@ -2,33 +2,54 @@ import React, { useState } from "react";
 import Image from "next/image";
 import auth from "../src/img/auth.jpeg";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 function Signup() {
+  const router = useRouter();
+
   const [firstname, setFirstame] = React.useState("");
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [alert, setAlert] = useState(false);
 
+  const [empty, setEmpty] = useState("");
+
   async function handleSubmit(e) {
     e.preventDefault();
-    const user = await axios({
-      method: "POST",
-      headers: { "content-type": "application/x-www-form-urlencoded" },
-      url: "http://localhost:3001/user",
-      data: {
-        firstname,
-        name,
-        email,
-        password,
-      },
-    });
-    try {
-      if (user) {
-        return true;
+
+    if (!firstname) {
+      setEmpty("Veuillez renseigner votre prénom");
+    } else if (!name) {
+      setEmpty("Veuillez renseigner votre nom");
+    } else if (!email) {
+      setEmpty("Veuillez renseigner votre email");
+    } else if (!password) {
+      setEmpty("Veuillez renseigner votre mot de passe");
+    } else {
+      const user = await axios({
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        url: "http://localhost:3001/user",
+        data: {
+          firstname,
+          name,
+          email,
+          password,
+        },
+      });
+
+      try {
+        if (user) {
+          console.log("user : ", user);
+          // router.push("/signin");
+          console.log("users : ", user);
+        } else {
+          console.log("User not found");
+        }
+      } catch (err) {
+        throw err;
       }
-    } catch (err) {
-      throw err;
     }
   }
 
@@ -96,6 +117,7 @@ function Signup() {
                 />
               </div>
             </div>
+            <div className="message__error">{empty}</div>
             <button
               type="submit"
               class="btn btn-primary submit form__button"

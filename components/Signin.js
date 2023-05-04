@@ -8,28 +8,37 @@ import axios from "axios";
 function Signin() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [empty, setEmpty] = useState("");
 
   const router = useRouter();
 
   const handleSignin = async (e) => {
     e.preventDefault();
-    const user = await axios({
-      method: "POST",
-      headers: { "content-type": "application/x-www-form-urlencoded" },
-      url: "http://localhost:3001/auth/login",
-      data: {
-        email,
-        password,
-      },
-    });
 
-    try {
-      if (user) {
-        window.localStorage.setItem("data", JSON.stringify(user.data));
-        router.push("/");
+    if (!email) {
+      setEmpty("Veuillez renseigner votre email");
+    } else if (!password) {
+      setEmpty("Veuillez renseigner votre mot de password");
+    } else {
+      const user = await axios({
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        url: "http://localhost:3001/auth/login",
+        data: {
+          email,
+          password,
+        },
+      });
+
+      try {
+        if (user) {
+          window.localStorage.setItem("data", JSON.stringify(user.data));
+          // router.push("./");
+          console.log("user:", user);
+        }
+      } catch (err) {
+        throw err;
       }
-    } catch (err) {
-      throw err;
     }
   };
 
@@ -55,6 +64,7 @@ function Signin() {
                   className="form-control"
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
+                  required
                 />
               </div>
             </div>
@@ -68,10 +78,11 @@ function Signin() {
                   className="form-control"
                   onChange={(e) => setPassword(e.target.value)}
                   id="password"
+                  required
                 />
               </div>
             </div>
-
+            <div className="message__error">{empty}</div>
             <button
               type="submit"
               class="btn btn-primary form__button"

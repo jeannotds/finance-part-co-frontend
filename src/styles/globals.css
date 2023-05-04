@@ -148,3 +148,8 @@ header{
   display: flex;
   flex-direction: column;
 }
+
+.noFound {
+  background-color: red;
+  font-size: 30px;
+}
