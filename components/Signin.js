@@ -28,17 +28,15 @@ function Signin() {
           email,
           password,
         },
-      });
-
-      try {
-        if (user) {
+      }).then((user) =>{
           window.localStorage.setItem("data", JSON.stringify(user.data));
-          // router.push("./");
-          console.log("user:", user);
+          router.push("./");
         }
-      } catch (err) {
-        throw err;
-      }
+       ).catch ((err) =>{
+          if(err.response){
+            setEmpty("Email ou mot de passe incorrect");
+          }        
+      })
     }
   };
 
@@ -74,7 +72,7 @@ function Signin() {
                   Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   className="form-control"
                   onChange={(e) => setPassword(e.target.value)}
                   id="password"

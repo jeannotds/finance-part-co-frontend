@@ -1,6 +1,6 @@
 async function loading() {
   await new Promise((resolve) => {
-    setTimeout(resolve, 1500);
+    setTimeout(resolve, 700);
   });
 }
 

@@ -42,7 +42,7 @@ function Signup() {
       try {
         if (user) {
           console.log("user : ", user);
-          // router.push("/signin");
+          router.push("/signin");
           console.log("users : ", user);
         } else {
           console.log("User not found");
