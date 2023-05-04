@@ -1,5 +1,6 @@
 import React from "react";
 import Signin from "../../components/Signin";
+import loading from "../../loading/loading";
 
 function signup() {
   return (
@@ -7,6 +8,14 @@ function signup() {
       <Signin />
     </>
   );
+}
+
+export async function getServerSideProps(){
+
+  await loading();
+  return {
+      props: {}
+    }
 }
 
 export default signup;

@@ -31,7 +31,7 @@ function NavbarItem() {
   };
 
   return (
-    <div className="container__menu" onClick={(e) => setSignup(!signup)}>
+    <div className="container__menu" >
       <Link href="/" className="menu__link">
         Home
       </Link>
@@ -42,7 +42,7 @@ function NavbarItem() {
         Project
       </Link>
 
-      <div className="action__signup" >
+      <div className="action__signup" onClick={(e) => setSignup(!signup)} >
         {userData ? (
           <Link href="/" className="connection">
             <Image src={Profile} className="user__profile" alt="user urofile" />

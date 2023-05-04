@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { SET_USER } from "@/redux/user";
 import { useRouter } from "next/router";
 import { SET_PROJECT } from "@/redux/project";
+import loading from "../../loading/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,8 @@ export default function Home({ dataproject }) {
 }
 
 export async function getServerSideProps() {
+  await loading();
+
   const res = await fetch("http://localhost:3001/project");
   const dataproject = await res.json();
 

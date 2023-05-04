@@ -8,14 +8,29 @@ import "@/styles/mainpage.css";
 import "@/styles/projectcard.css";
 import "@/styles/about.css";
 import "@/styles/footer.css";
+import "@/styles/loading.css";
 import AOS from "aos";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
+import Router from "next/router";
 
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
+import Loader from "../../components/Loader";
+import { useState } from "react";
+import loading from "../../loading/loading";
 
 export default function App({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
+  Router.events.on("routeChangeStart", (url) => {
+    setLoading(true);
+    console.log("Route in changing...");
+  });
+  Router.events.on("routeChangeComplete", (url) => {
+    setLoading(false);
+    console.log("Route in Ending...");
+  });
+
   return (
     <>
       <Head>
@@ -27,10 +42,23 @@ export default function App({ Component, pageProps }) {
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>AOS.init();</script>
       </Head>
-      <Provider store={store}>
-        <Navbar />
-        <Component {...pageProps} />
-      </Provider>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Provider store={store}>
+          <Navbar />
+          <Component {...pageProps} />
+        </Provider>
+      )}
     </>
   );
+}
+
+export async function getServerSideProps() {
+  await loading();
+  return {
+    props: {
+      pageProps: {},
+    },
+  };
 }
