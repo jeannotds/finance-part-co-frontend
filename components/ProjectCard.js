@@ -7,7 +7,14 @@ import { useSelector } from "react-redux";
 
 function ProjectCard() {
   const project = useSelector((state) => state.project);
-  console.log("projects : ", project);
+  const dataproject = project?.project?.map((project) => {
+    return project
+  });
+
+  const  icon = dataproject.map((projetuser) => {return projetuser});
+
+  // console.log('icon : ', icon);
+
 
   return (
     <>
@@ -39,11 +46,9 @@ function ProjectCard() {
                       className="image__user"
                       alt="Image Project"
                     />
-                    <div>Jeannot Lds</div>
+                    <div>{proj.user.name } {proj.user.firstname } </div>
                   </div>
-                  <p>
-                    {proj.description}
-                  </p>
+                  <p>{proj.description}</p>
                 </div>
               </div>
             );

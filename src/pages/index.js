@@ -19,7 +19,7 @@ export default function Home({ dataproject }) {
 
   dispatch(SET_PROJECT(dataproject));
 
-  console.log("dataproject : ", dataproject);
+  // console.log("dataproject : ", dataproject);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
