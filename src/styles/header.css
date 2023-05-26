@@ -1,0 +1,26 @@
+
+.header{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+.logo{
+    color: #0D99FF;
+}
+
+.navbar a{
+    padding: 0 25px;
+    text-decoration: none;
+    color: FFF;
+}
+
+.navbar .active{
+    background-color: #0D99FF;
+    padding: 5px 17px;
+    border-radius: 8px;
+    color: white;
+}

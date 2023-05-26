@@ -1,0 +1,58 @@
+.containers {
+  background-color: #f2f6fc;
+  padding: 30px 70px;
+  display: flex;
+}
+
+.formsignup {
+  background-color: rgba(13, 153, 255, 0.21);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formsignup h2 {
+  font-size: 27px;
+}
+
+.fullname{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+.adress, .email, .phone, .password{
+    width: 70%;
+    margin: auto;
+}
+
+.fullname div {
+  margin-right: 10px;
+}
+
+.img-signup {
+    width: 50%;
+}
+
+.auth{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.img-signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    width: 70%;
+    margin: 13px auto 13px;
+
+}
