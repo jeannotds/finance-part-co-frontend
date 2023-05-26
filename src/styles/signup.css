@@ -1,58 +1,112 @@
-.containers {
-  background-color: #f2f6fc;
-  padding: 30px 70px;
+.signup__container {
   display: flex;
-}
-
-.formsignup {
-  background-color: rgba(13, 153, 255, 0.21);
-  height: 60px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.formsignup h2 {
-  font-size: 27px;
+.alert{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: red;
 }
 
-.fullname{
-    display: flex;
-    width: 70%;
-    margin: auto;
-}
-.adress, .email, .phone, .password{
-    width: 70%;
-    margin: auto;
+.blog__signup-container {
+  width: 68%;
+  display: flex;
+  position: absolute;
+  top: 200px;
 }
 
-.fullname div {
-  margin-right: 10px;
+.img__signup,
+.form__form-signup {
+  width: 50%;
 }
 
-.img-signup {
-    width: 50%;
+.auth__signup {
+  margin: auto;
 }
 
-.auth{
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
+.img__signup,
+.form__form-signup {
+  width: 50%;
 }
 
-.img-signup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img__signup h2 {
+  text-align: center;
 }
 
-.form{
+.message__error{
+  color: red;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog__signup-container {
+    margin: 0;
+    padding: 0;
+    top: 120px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .blog__signup-container {
+    margin: 0;
+    padding: 0;
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup__container {
+    width: 100%;
+  }
+
+  .blog__signup-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    top: 120px;
+  }
+
+  .form__form-signup,
+  .img__signup {
+    margin: auto;
+  }
+
+  .auth__signup {
+    display: none;
+  }
+
+  .form__form-signup {
+    width: 100%;
+    padding: 0 70px;
+  }
 }
 
-.button{
-    width: 70%;
-    margin: 13px auto 13px;
+@media screen and (max-width: 280px) {
+  .signup__container {
+    width: 100%;
+    padding: 0;
+  }
 
+  .blog__signup-container {
+    width: 100%;
+    padding: 0;
+    top: 10px;
+  }
+
+  .blog__signup-container h2 {
+    padding: 100px 0 0 0;
+  }
+
+  .message__signin {
+    display: none;
+  }
+
+  .form__form-signup {
+    width: 100%;
+    padding: 20px;
+  }
 }

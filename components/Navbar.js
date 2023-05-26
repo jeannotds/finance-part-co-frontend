@@ -1,46 +1,57 @@
-import React, { useState } from "react";
-import { AppBar, Typography, Tabs, Tab, useTheme,useMediaQuery } from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
-import DrawerComp from "./Drawer";
+import React, { useEffect, useState } from "react";
+import { FaAlignJustify } from "react-icons/fa";
+import NavbarItem from "./NavbarItem";
+import { useRouter } from "next/router";
+
+const NAV_LIST = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "About",
+    href: "/about",
+  },
+  {
+    text: "Project",
+    href: "/project",
+  },
+  {
+    text: "Sign In",
+    href: "/signin",
+  },
+];
 
 function Navbar() {
+  const [navActive, setNavActive] = useState(false);
 
-    const [value, setValue] = useState();
-    const theme = useTheme();
-    
-    const isMatch = useMediaQuery(theme.breakpoints.down('md'))
-    const PAGES =  ["Home", "AboutUs", "Project", "signup"];
+  
 
   return (
-    <React.Fragment>
-      {/* AppBar // Barre d'application */}
-      <AppBar sx={{ background: "#F2F6FC" }}>
-        {/* ToolBar / Barre d'outil */}
-        <Toolbar>
-          {/* Typography limite le nombre de caractere */}
-          <Typography sx={{ color: "#0D99FF", fontWeight: "bolder", fontSize:"30px" }}>
-            FinP
-          </Typography>
-          {isMatch ? (
-            <>
-                <Typography>FinP</Typography>
-                <DrawerComp />
-            </>
-          ): (
-          <>
-            <Tabs sx={{marginLeft:"auto"}} value={value} onChange={(e, value) => setValue(value)}   indicatorColor="secondary">
-                {
-                    PAGES.map((page, index)=>(
-                        <Tab key={index} label={page}></Tab>
-                    ))
-                }
-            </Tabs>
-          </>)}
-         
-        </Toolbar>
-      </AppBar>
-    </React.Fragment>
+    <header className="header">
+      <h2 className="logo">FinP</h2>
+      <nav className={`${!navActive ? "actived" : "navbar"}`}>
+        <NavbarItem />
+      </nav>
+      <FaAlignJustify
+        className="icons"
+        onClick={() => {
+          setNavActive(!navActive);
+          console.log(navActive);
+        }}
+      />
+    </header>
   );
 }
 
 export default Navbar;
+
+{
+  /* {
+          NAV_LIST.map((nav, index) => {
+            return (
+                  <a className="menu__link" key={index} href={nav.href}>{nav.text}</a>
+            )
+          })
+  } */
+}
