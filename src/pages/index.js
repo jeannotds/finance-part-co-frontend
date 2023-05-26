@@ -12,7 +12,7 @@ import loading from "../../loading/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ dataproject }) {
+export default function Home({ dataproject}) {
   const [user, setUser] = useState();
   const dispatch = useDispatch();
   const router = useRouter();
@@ -44,7 +44,8 @@ export default function Home({ dataproject }) {
 export async function getServerSideProps() {
   await loading();
 
-  const res = await fetch("http://localhost:3001/project");
+  const res = await fetch("https://crowdfunding-finance.onrender.com/project");
+  console.log('res = ', res);
   const dataproject = await res.json();
 
   if (!dataproject) {

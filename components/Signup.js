@@ -31,7 +31,7 @@ function Signup() {
       const user = await axios({
         method: "POST",
         headers: { "content-type": "application/x-www-form-urlencoded" },
-        url: "http://localhost:3001/user",
+        url: "https://crowdfunding-finance.onrender.com/user",
         data: {
           firstname,
           name,
