@@ -1,81 +1,136 @@
-
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import auth from "../src/img/auth.jpeg";
-
+import axios from "axios";
+import { useRouter } from "next/router";
 
 function Signup() {
+  const router = useRouter();
+
+  const [firstname, setFirstame] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [alert, setAlert] = useState(false);
+
+  const [empty, setEmpty] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    // e.stopPropagation();
+
+    if (!firstname) {
+      setEmpty("Veuillez renseigner votre prénom");
+    } else if (!name) {
+      setEmpty("Veuillez renseigner votre nom");
+    } else if (!email) {
+      setEmpty("Veuillez renseigner votre email");
+    } else if (!password) {
+      setEmpty("Veuillez renseigner votre mot de passe");
+    } else {
+      const user = await axios({
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        url: "https://crowdfunding-finance.onrender.com/user",
+        data: {
+          firstname,
+          name,
+          email,
+          password,
+        },
+      });
+
+      try {
+        if (user) {
+          e.preventDefault();
+          router.push("/signin");
+        } else {
+          console.log("User not found");
+        }
+      } catch (err) {
+        throw err;
+      }
+    }
+  }
+
   return (
     <>
-      <div className="formsignup">
-        <h2>Form Sign Up</h2>
-      </div>
-      <div className="containers">
-        <div className="img-signup">
-          {/* <Image src={auth} alt="signup" className="auth" /> */}
-          lorem compiled client and server successfully in 194 ms 210 modules
-          compiled client and server successfully in 194 ms (210 modules)
-          compiled client and server successfully in 194 ms (210 modules)
+      <div className="signup__container">
+        <div className="blog__signup-container">
+          <div className="img__signup">
+            <h2>Form Sign Up</h2>
+            <Image src={auth} alt="signup" className="auth__signup" />
+            <p className="message__signin">
+              Connectez-vous pour avoir acces aux données.
+            </p>
+          </div>
+          <form className="form__form-signup">
+            <div className="form__firstname">
+              <div>
+                <label for="form__firstname" className="col-form-label">
+                  Firstname
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="form__firstname"
+                  onChange={(e) => setFirstame(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="form__name">
+              <div>
+                <label for="form__name" className="col-form-label">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  onChange={(e) => setName(e.target.value)}
+                  className="form-control"
+                  id="form__name"
+                />
+              </div>
+            </div>
+            <div className="form__password">
+              <div>
+                <label for="form__password" className="col-form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="form__password"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="form__cpassword">
+              <div>
+                <label for="form__cpassword" className="col-form-label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="form__cpassword"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="message__error">{empty}</div>
+            <button
+              type="submit"
+              class="btn btn-primary submit form__button"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+            <div className="msg__account">
+              Do yo have account ? <a href="signin">Sign in.</a>
+            </div>
+          </form>
         </div>
-        <form className="form">
-          <div className="fullname">
-            <div>
-              <label for="firstname" className="col-form-label">
-                {" "}
-                Firstname{" "}
-              </label>
-              <input type="text" className="form-control" id="firstname" />
-            </div>
-            <div>
-              <label for="name" className="col-form-label">
-                {" "}
-                Name
-              </label>
-              <input type="text" className="form-control" id="name" />
-            </div>
-          </div>
-          <div className="adress">
-            <div>
-              <label for="adress" className="col-form-label">
-                Your adress
-              </label>
-              <input type="text" className="form-control" id="adress" />
-            </div>
-          </div>
-          <div className="email">
-            <div>
-              <label for="email" className="col-form-label">
-                Email
-              </label>
-              <input type="text" className="form-control" id="email" />
-            </div>
-          </div>
-          <div className="phone">
-            <div>
-              <label for="phone" className="col-form-label">
-                Phone Number
-              </label>
-              <input type="text" className="form-control" id="phone" />
-            </div>
-          </div>
-          <div className="password">
-            <div>
-              <label for="password" className="col-form-label">
-                Password
-              </label>
-              <input type="text" className="form-control" id="password" />
-            </div>
-          </div>
-          <div className="password">
-            <div>
-              <label for="cpassword" className="col-form-label">
-                Confirm Password
-              </label>
-              <input type="text" className="form-control" id="cpassword" />
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary button">Submit</button>
-        </form>
+        {/* {alert && <div className="alert">AMEKEKEJEHEHEHE</div>} */}
       </div>
     </>
   );
