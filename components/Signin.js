@@ -14,7 +14,7 @@ function Signin() {
 
   const handleSignin = async (e) => {
     e.preventDefault();
-
+    console.log("Sign");
     if (!email) {
       setEmpty("Veuillez renseigner votre email");
     } else if (!password) {
